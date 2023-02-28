@@ -1,7 +1,6 @@
 <?php
 namespace Mouf\Picotainer;
 
-use Interop\Container\ContainerInterface as InteropContainer;
 use Psr\Container\ContainerInterface as Psr11Container;
 
 /**
@@ -10,7 +9,7 @@ use Psr\Container\ContainerInterface as Psr11Container;
  *
  * @author David Négrier <david@mouf-php.com>
  */
-class Picotainer implements InteropContainer
+class Picotainer implements Psr11Container
 {
 
     /**
@@ -47,7 +46,7 @@ class Picotainer implements InteropContainer
     }
 
     /* (non-PHPdoc)
-     * @see \Interop\Container\ContainerInterface::get()
+     * @see \Psr\Container\ContainerInterface::get()
      */
     public function get($identifier)
     {
@@ -62,7 +61,7 @@ class Picotainer implements InteropContainer
     }
 
     /* (non-PHPdoc)
-     * @see \Interop\Container\ContainerInterface::has()
+     * @see \Psr\Container\ContainerInterface::has()
      */
     public function has($identifier)
     {
